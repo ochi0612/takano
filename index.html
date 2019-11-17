@@ -1,15 +1,69 @@
 <!DOCTYPE html>
-<html lang="ja">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./stlye.css">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-    takano
+   <header>
+       <div class="clearfix back">
+           <div class="logo">
+               <img src="./logo.png" alt="">
+           </div>
+           <div class="menu">
+                <ul>
+                    <li>Welcome</li>
+                    <li>Movie</li>
+                    <li>About</li>
+                </ul>
+           </div>
+       </div>
+   </header>
+   <div class="main"></div>
+   <footer>
+       <p>fin.</p>
+   </footer>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(function(){
+   var imgs = [
+        { "a": '', "b":"./img/IMG_0980.jpg"},
+        { "a": '', "b":"./img/IMG_0961.jpg"},
+        { "a": '', "b":"./img/IMG_0699.jpg"},
+        { "a": '', "b":"./img/IMG_0652.jpg"},
+        { "a": '', "b":"./img/IMG_0653.jpg"},
+        { "a": '', "b":"./img/IMG_0654.jpg"},
+        { "a": '', "b":"./img/IMG_0656.jpg"},
+        { "a": '', "b":"./img/IMG_0661.jpg"},
+        { "a": '', "b":"./img/IMG_0663.jpg"},
+        { "a": '', "b":"./img/IMG_0664.jpg"},
+        { "a": '', "b":"./img/IMG_0965.jpg"},
+        { "a": '', "b":"./img/IMG_0960.jpg"},
+        { "a": '', "b":"./img/IMG_0947.jpg"},
+        { "a": '', "b":"./img/IMG_0648.jpg"},
+        { "a": '', "b":"./img/IMG_0976.jpg"},
+        { "a": '', "b":"./img/IMG_0979.jpg"},
+        { "a": '', "b":"./img/IMG_0981.jpg"},
+        { "a": '', "b":"./img/IMG_0982.jpg"},
+        { "a": '', "b":"./img/IMG_1018.jpg"},
+   ];
+   var text = '';
+   Object.keys(imgs).forEach(function (key) {
+       text +=
+           '<a href="' + this[key].a + '">' +
+               '<img src="' + this[key].b + '">' +
+           '</a>'
+       ;
+   }, imgs);
+   $('.main').append(text);
+});
+
+</script>
+
+
 </body>
 </html>
